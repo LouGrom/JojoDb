@@ -4,6 +4,17 @@
 
 {% block body %}
 
-<h1>Hello !</h1>
+<h1>Liste des saisons :</h1>
+
+<div class="main-contain">
+{% for season in seasons %}
+    
+    <div class="postersHome">
+        <a href="#"> {{ season.name }}</a>
+        <img src="{{ season.picture }}" alt="picture jojo season">
+    </div>
+
+{% endfor %}
+</div>
 
 {% endblock %}

@@ -1,0 +1,22 @@
+/* HOME */
+
+h1 {
+    text-align: center;
+}
+
+.main-contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.postersHome {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    text-align: center;
+}
+
+.postersHome a {
+    margin-bottom: 2em;
+}

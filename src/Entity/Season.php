@@ -25,7 +25,7 @@ class Season
     private $name;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="date", nullable=true)
      */
     private $date;
 
@@ -38,6 +38,11 @@ class Season
      * @ORM\ManyToMany(targetEntity=Character::class, inversedBy="seasons")
      */
     private $characters;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
 
     public function __construct()
     {
@@ -107,6 +112,18 @@ class Season
         if ($this->characters->contains($character)) {
             $this->characters->removeElement($character);
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

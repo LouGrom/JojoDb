@@ -10,7 +10,7 @@
 {% for season in seasons %}
     
     <div class="postersHome">
-        <a href="#"> {{ season.name }}</a>
+        <a href="{{ path('season_view',{'id' : season.id})}}"> {{ season.name }}</a>
         <img src="{{ season.picture }}" alt="picture jojo season">
     </div>
 

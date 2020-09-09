@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personnage{% endblock %}
+
+{% block body %}
+
+<h1> {{ character.name }} </h1>
+<img src="{{ character.picture }}" alt="character picture">
+<p>{{ character.description }} </p>
+
+<h2>Stand du personnage : </h2>
+
+<div>
+    <p>{{ character.standName.name }}</p>
+    <img src="{{ character.standName.picture }}" alt="stand picture">
+    <p>{{ character.standName.description }}</p>
+</div>
+
+
+{% endblock %}

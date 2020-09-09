@@ -10,11 +10,20 @@
 
 <h2>Stand du personnage : </h2>
 
+{% if character.standName is null %}
+
+<p>Ce personnage n'a pas de stand</p>
+
+{% else %}
+
 <div>
     <p>{{ character.standName.name }}</p>
     <img src="{{ character.standName.picture }}" alt="stand picture">
     <p>{{ character.standName.description }}</p>
 </div>
+
+{% endif %}
+
 
 
 {% endblock %}

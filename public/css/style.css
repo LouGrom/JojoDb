@@ -1,7 +1,15 @@
 /* HOME */
+body {
+    margin: 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 h1 {
     text-align: center;
+}
+
+a {
+    color: coral;
 }
 
 .main-contain {
@@ -19,4 +27,57 @@ h1 {
 
 .postersHome a {
     margin-bottom: 2em;
+}
+
+.postersHome img {
+    height: 318px;
+    width: 212px;
+}
+
+nav {
+    background-color: blueviolet;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end ;
+    flex-direction: row;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    margin-right: 2em;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+/* SEASON */
+
+.season-container {
+    display: flex;
+    width: 75%;
+    margin: auto;
+}
+
+.season-container img {
+    height: 20em;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.character-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.character-list img {
+    height: 10em;
 }

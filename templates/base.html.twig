@@ -4,9 +4,20 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <nav>
+            <div class="navlist">
+                <ul>
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">Personnages</a></li>
+                    <li><a href="">Stands</a></li>
+                </ul>
+            </div>
+        </nav>
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

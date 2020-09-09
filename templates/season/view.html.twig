@@ -5,12 +5,16 @@
 {% block body %}
 
 <h1> {{ season.name }} </h1>
-<img src="{{ season.picture }}" alt="picture jojo season">
-<p>Date de sortie : {{ season.date|date("d/m/Y") }}</p>
-<p>{{ season.description }} </p>
+<div class="season-container">
+    <img src="{{ season.picture }}" alt="picture jojo season">
+    <div class="season-container right">
+        <p>Date de sortie : {{ season.date|date("d/m/Y") }}</p>
+        <p>{{ season.description }} </p>
+    </div>
+</div>
 
 <h2>Liste des personnages de la saison : </h2>
-<div>
+<div class="character-list">
 {% for character in season.characters %}
     <div>
         <a href="{{ path('character_view',{'id' : character.id})}}">{{ character.name }}</a>

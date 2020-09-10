@@ -43,9 +43,7 @@ a:visited {
     text-decoration: none;
     width: 241px;
     height: 425px;
-    transition: color 0.5s ease;
-    transition: background-color 0.5s ease;
-    transition: transform 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 .main-contain a:hover {
@@ -111,8 +109,7 @@ nav a:hover {
     padding: 0.5em;
     text-align: center;
     text-decoration: none;
-    transition: color 0.5s ease;
-    transition: transform 0.5s ease;
+    transition: all 0.5s ease;
     flex-direction: column;
     height: 12em;
     width: 7em;

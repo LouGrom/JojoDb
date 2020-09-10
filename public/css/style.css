@@ -6,6 +6,8 @@ body {
 
 h1 {
     text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: normal;
 }
 
 a {
@@ -13,7 +15,7 @@ a {
 }
 
 a:visited {
-    color: gray;
+    color: rgb(255, 162, 129);
 }
 
 .main-contain {
@@ -30,7 +32,10 @@ a:visited {
 }
 
 .postersHome a {
-    margin-bottom: 2em;
+    display: block;
+    background-color: rgb(159, 87, 177);
+    padding: 0.5em;
+    width: 196px;
 }
 
 .postersHome img {
@@ -39,9 +44,10 @@ a:visited {
 }
 
 nav {
-    background-color: blueviolet;
+    background-color: rgb(159, 87, 177);
     height: 10vh;
     display: flex;
+    align-items: center;
     justify-content: flex-end ;
     flex-direction: row;
 }
@@ -62,6 +68,7 @@ nav a {
 
 nav a:hover {
     color: white;
+    text-decoration: underline;
 }
 
 /* SEASON */

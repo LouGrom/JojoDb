@@ -5,6 +5,9 @@
 {% block body %}
 
 <h1> {{ season.name }} </h1>
+
+<button><a href="{{ path('season_edit', {'id' : season.id}) }}">Modifier</a></button>
+
 <div class="season-container">
     <img src="{{ season.picture }}" alt="picture jojo season">
     <div class="season-container right">

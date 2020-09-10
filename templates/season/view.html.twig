@@ -16,9 +16,11 @@
 <h2>Liste des personnages de la saison : </h2>
 <div class="character-list">
 {% for character in season.characters %}
-    <div>
-        <a href="{{ path('character_view',{'id' : character.id})}}">{{ character.name }}</a>
-        <img src="{{ character.picture }}" alt="character picture" href="{{ path('character_view',{'id' : character.id})}}">
+    <div class="character">
+        <a href="{{ path('character_view',{'id' : character.id})}}">
+            <h3>{{ character.name }}</h3>
+            <img src="{{ character.picture }}" alt="character picture">
+        </a>   
     </div>
 {% endfor %}
 </div>

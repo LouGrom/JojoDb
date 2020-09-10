@@ -4,7 +4,9 @@
 
 {% block body %}
 
-<button><a href="{{ path('character_edit', {'id' : character.id})}}">Modifier</a></button>
+<a href="{{ path('character_edit', {'id' : character.id})}}">
+    <button>Modifier</button>
+</a>
 
 <h1> {{ character.name }} </h1>
 <img src="{{ character.picture }}" alt="character picture">

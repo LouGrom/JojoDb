@@ -10,7 +10,7 @@ h1 {
     font-weight: normal;
 }
 
-.addSeason-button {
+button {
     background-color: rgb(159, 87, 177);
     border-radius: 0.2em;
     border: none;
@@ -26,7 +26,7 @@ h1 {
 }
 
 
-.addSeason-button:hover{
+button:hover{
     transition: all 0.5s ease;
     background-color: rgba(159, 87, 177, 0.61);
     color: white;

@@ -4,7 +4,9 @@
 
 {% block body %}
 
-    <button><a href="{{ path('stand_edit', {'id' : stand.id})}}">Modifier</a></button>
+    <a href="{{ path('stand_edit', {'id' : stand.id})}}">
+        <button>Modifier</button>
+    </a>
 
     <h1>{{ stand.name }}</h1>
 

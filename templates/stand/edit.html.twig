@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Stand{% endblock %}
+
+{% block body %}
+    <h1>Modifier le Stand</h1>
+
+    {{ include('stand/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+    <a href="{{ path('stand_list') }}">Retour</a>
+
+    {{ include('stand/_delete_form.html.twig') }}
+{% endblock %}

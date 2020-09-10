@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stand{% endblock %}
+
+{% block body %}
+
+    <button><a href="{{ path('stand_edit', {'id' : stand.id})}}">Modifier</a></button>
+
+    <h1>{{ stand.name }}</h1>
+
+    <img src="{{ stand.picture }}" alt="stand picture">
+
+    <p>{{ stand.description }}</p>
+
+{% endblock %}

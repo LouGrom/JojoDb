@@ -4,10 +4,12 @@
 
 {% block body %}
 
+<button><a href="{{ path('stand_new')}}">Ajouter</a></button>
+
 <h1> Liste des stands : </h1>
 {% for stand in stands %}
 
-<p>{{ stand.name }}</p>
+<a href="{{ path('stand_show', {'id' : stand.id})}}">{{ stand.name }}</a>
 <img src="{{ stand.picture }}" alt="character picture">
 <p>{{ stand.description }} </p>
 

@@ -3,7 +3,10 @@
 namespace App\Form;
 
 use App\Entity\Character;
+use App\Entity\Stand;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -36,6 +39,10 @@ class CharacterType extends AbstractType
             // ->add('age')
             // ->add('size')
             ->add('description', TextareaType::class, ['label'=>'Description'])
+            ->add('standName', StandType::class, [
+                'label'=>'Stand',
+                'required'=>false,
+            ])
         ;
     }
 

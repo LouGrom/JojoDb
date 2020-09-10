@@ -2,7 +2,9 @@
 
 namespace App\Form;
 
+use App\Entity\Character;
 use App\Entity\Season;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -36,6 +38,15 @@ class SeasonType extends AbstractType
                 ]
             ])
             ->add('description', TextareaType::class, ['label'=>'Description'])
+            ->add('characters',
+            EntityType::class, [
+                "label" => "personnages",
+                "class" => Character::class,
+                "choice_label" => "name",
+                "multiple" => true,
+                "expanded" => true,
+                "by_reference" => false
+            ])
         ;
     }
 

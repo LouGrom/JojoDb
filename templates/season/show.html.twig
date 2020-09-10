@@ -20,7 +20,7 @@
 <div class="character-list">
 {% for character in season.characters %}
     <div>
-        <a href="{{ path('character_view',{'id' : character.id})}}">{{ character.name }}</a>
+        <a href="{{ path('character_show',{'id' : character.id})}}">{{ character.name }}</a>
         <img src="{{ character.picture }}" alt="character picture">
     </div>
 {% endfor %}

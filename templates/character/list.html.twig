@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Personnages{% endblock %}
+
+{% block body %}
+
+<h1> Liste des personnages : </h1>
+{% for character in characters %}
+
+<p>{{ character.name }}</p>
+<img src="{{ character.picture }}" alt="character picture">
+<p>{{ character.description }} </p>
+
+{% endfor %}
+
+{% endblock %}

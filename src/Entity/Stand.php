@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\StandRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=StandRepository::class)
@@ -19,6 +20,8 @@ class Stand
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank
+     * @Assert\Length(max=255)
      */
     private $name;
 

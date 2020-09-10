@@ -5,6 +5,9 @@
 {% block body %}
 
 <h1> {{ season.name }} </h1>
+
+<button><a href="{{ path('season_edit', {'id' : season.id}) }}">Modifier</a></button>
+
 <div class="season-container">
     <img src="{{ season.picture }}" alt="picture jojo season">
     <div class="season-container right">
@@ -17,10 +20,8 @@
 <div class="character-list">
 {% for character in season.characters %}
     <div class="character">
-        <a href="{{ path('character_view',{'id' : character.id})}}">
-            <h3>{{ character.name }}</h3>
-            <img src="{{ character.picture }}" alt="character picture">
-        </a>   
+        <a href="{{ path('character_show',{'id' : character.id})}}">{{ character.name }}</a>
+        <img src="{{ character.picture }}" alt="character picture">
     </div>
 {% endfor %}
 </div>

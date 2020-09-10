@@ -6,13 +6,15 @@
 
 <h1>Liste des saisons :</h1>
 
+<button><a href="{{ path('season_new')}}">Ajouter</a></button>
+
 <div class="main-contain">
 {% for season in seasons %}
     
-    <a href="{{ path('season_view',{'id' : season.id})}}">
-        <h3>{{ season.name }}</h3>
-        <img src="{{ season.picture }}" alt="picture jojo season">    
-    </a>
+    <div class="postersHome">
+        <a href="{{ path('season_show',{'id' : season.id})}}"> {{ season.name }}</a>
+        <img src="{{ season.picture }}" alt="picture jojo season">
+    </div>
 
 {% endfor %}
 </div>

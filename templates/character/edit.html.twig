@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier personnage{% endblock %}
+
+{% block body %}
+    <h1>Modifier le personnage</h1>
+
+    {{ include('character/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+    <a href="{{ path('character_list') }}">Retour</a>
+
+    {{ include('character/_delete_form.html.twig') }}
+{% endblock %}

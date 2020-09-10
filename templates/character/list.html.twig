@@ -4,10 +4,13 @@
 
 {% block body %}
 
+<button><a href="{{ path('character_new')}}">Ajouter</a></button>
+
 <h1> Liste des personnages : </h1>
+
 {% for character in characters %}
 
-<p>{{ character.name }}</p>
+<a href="{{ path('character_show',{'id' : character.id})}}">{{ character.name }}</a>
 <img src="{{ character.picture }}" alt="character picture">
 <p>{{ character.description }} </p>
 

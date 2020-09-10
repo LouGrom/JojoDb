@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Stand{% endblock %}
+
+{% block body %}
+    <h1>Nouveau Stand</h1>
+
+    {{ include('stand/_form.html.twig') }}
+
+    <a href="{{ path('stand_list') }}">Retour</a>
+{% endblock %}

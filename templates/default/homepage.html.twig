@@ -6,7 +6,9 @@
 
 <h1>Liste des saisons :</h1>
 
-<button><a href="{{ path('season_new')}}">Ajouter</a></button>
+<a href="{{ path('season_new')}}">
+    <button class="addSeason-button">Ajouter</button>
+</a>
 
 <div class="main-contain">
 {% for season in seasons %}

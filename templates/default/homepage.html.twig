@@ -11,11 +11,11 @@
 <div class="main-contain">
 {% for season in seasons %}
     
-    <div class="postersHome">
-        <a href="{{ path('season_show',{'id' : season.id})}}"> {{ season.name }}</a>
+    <a href="{{ path('season_show',{'id' : season.id})}}">
+        <h2> {{ season.name }} </h2>
         <img src="{{ season.picture }}" alt="picture jojo season">
-    </div>
-
+    </a>
+   
 {% endfor %}
 </div>
 

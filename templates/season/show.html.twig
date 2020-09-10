@@ -19,7 +19,7 @@
 <h2>Liste des personnages de la saison : </h2>
 <div class="character-list">
 {% for character in season.characters %}
-    <div>
+    <div class="character">
         <a href="{{ path('character_show',{'id' : character.id})}}">{{ character.name }}</a>
         <img src="{{ character.picture }}" alt="character picture">
     </div>

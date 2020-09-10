@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stands{% endblock %}
+
+{% block body %}
+
+<h1> Liste des stands : </h1>
+{% for stand in stands %}
+
+<p>{{ stand.name }}</p>
+<img src="{{ stand.picture }}" alt="character picture">
+<p>{{ stand.description }} </p>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,4 +1,5 @@
 /* HOME */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -39,30 +40,28 @@ a:visited {
 .main-contain {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: space-around;
 }
 
-.season-pic {
-    width: 225px;
-    height: 350px;
-}
-
 .main-contain a {
+    margin-bottom: 1.5em;
     display: block;
     padding: 0.5em;
     text-align: center;
     text-decoration: none;
     width: 241px;
-    height: 425px;
     transition: all 0.5s ease;
 }
 
 .main-contain a img {
-    display: inline;
+    display: inline-block;
+    width: 225px;
+    height: 350px;
 }
 
 .main-contain a:hover {
-    background-color: rgba(159, 87, 177, 0.61);
+    background-color: rgba(159, 87, 177);
     color: white;
     transform: scale(1.1, 1.1);
 }
@@ -95,55 +94,41 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* SEASON */
+/* FORMS*/
 
-.season-container {
-    display: flex;
-    width: 75%;
+.form {
+    width: 60%;
     margin: auto;
 }
 
-.season-container img {
-    height: 20em;
+.form label {
+    color: rgb(159, 87, 177);
+    font-weight: bold;
 }
 
-.right {
+#season_characters{
     display: flex;
     flex-direction: column;
-}
-
-.character-list {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    text-align: center;
+    height: 250px;
 }
 
-.character {
-    display: flex;
-    padding: 0.5em;
-    text-align: center;
-    text-decoration: none;
+#season_characters label {
+    color: black;
+    font-weight: normal;
+}
+
+.custom-file-label::after {
+    background-color: rgb(159, 87, 177);
+    color: white;
     transition: all 0.5s ease;
-    flex-direction: column;
-    height: 12em;
-    width: 7em;
 }
 
-.character h3 {
-    font-size: small;
-    margin-bottom: 0.1em;
-    margin-top: 0;
-    text-decoration: none;
+.col-form-label {
+    font-weight: bold;
+    color: rgb(159, 87, 177);
 }
 
-.character:hover {
-background-color: rgba(159, 87, 177, 0.61);
-color: white;
-transform: scale(1.1, 1.1);
-}
-
-.character img {
-    height: 160px;
-    width: 102px;
+.col-check-label {
+    color: black;
 }

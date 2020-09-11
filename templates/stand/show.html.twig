@@ -6,11 +6,11 @@
 
     <h1>{{ stand.name }}</h1>
 
-    <a class="btn mb-4" href="{{ path('stand_edit', {'id' : stand.id})}}">Modifier</a>
+    <a class="btn mb-4 ml-5" href="{{ path('stand_edit', {'id' : stand.id})}}">Modifier</a>
     <a class="btn mb-4" href="{{ path('stand_list')}}">Retour</a>
 
     <div class="d-flex">
-        <img height="350" src="{{ stand.picture }}" alt="stand picture">
+        <img class="ml-5" height="350" src="{{ stand.picture }}" alt="stand picture">
 
         <p class="ml-4">{{ stand.description }}</p>
     </div>

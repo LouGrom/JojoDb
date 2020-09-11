@@ -6,25 +6,31 @@
 
 <h1> {{ season.name }} </h1>
 
-<a class="btn" href="{{ path('season_edit', {'id' : season.id}) }}">Modifier</a>
+<a class="btn mb-4 ml-5" href="{{ path('season_edit', {'id' : season.id}) }}">Modifier</a>
+<a class="btn mb-4" href="{{ path('homepage')}}">Retour</a>
 
-<div class="season-container">
-    <img src="{{ season.picture }}" alt="picture jojo season">
+
+<div class="d-flex">
+    <img class="ml-5" src="{{ season.picture }}" alt="picture jojo season">
     <div class="season-container right">
-        <p>Date de sortie : {{ season.date|date("d/m/Y") }}</p>
-        <p>{{ season.description }} </p>
+        <p class="ml-4">Date de sortie : {{ season.date|date("d/m/Y") }}</p>
+        <p class="ml-4">{{ season.description }} </p>
     </div>
 </div>
 
-<h2>Liste des personnages de la saison : </h2>
-<div class="character-list">
-{% for character in season.characters %}
-    <div class="character">
-        <a href="{{ path('character_show',{'id' : character.id})}}">{{ character.name }}
-            <img src="{{ character.picture }}" alt="character picture">
-        </a>
-    </div>
-{% endfor %}
+<h2 class="mt-4 ml-5">Liste des personnages de la saison : </h2>
+
+<div class="d-flex flex-wrap justify-content-around">
+    {% for character in season.characters %}
+
+        <div class="card mt-4" style="width: 10rem;">
+            <div class="card-body">
+                <a href="{{ path('character_show',{'id' : character.id})}}" class="card-title">{{ character.name }}</a>
+            </div>
+            <img class="card-img-top" src="{{ character.picture }}" alt="character picture">
+        </div>
+
+    {% endfor %}
 </div>
 
 {% endblock %}

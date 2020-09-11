@@ -40,7 +40,7 @@ class SeasonType extends AbstractType
             ->add('description', TextareaType::class, ['label'=>'Description'])
             ->add('characters',
             EntityType::class, [
-                "label" => "personnages",
+                "label" => "Personnages",
                 "class" => Character::class,
                 "choice_label" => "name",
                 "multiple" => true,

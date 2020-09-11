@@ -5,11 +5,10 @@
 {% block body %}
     <h1>Modifier le personnage</h1>
 
-    {{ include('character/_form.html.twig', {'button_label': 'Modifier'}) }}
+    <a class="btn mb-3" href="{{ path('character_list') }}">Retour</a>
 
-    <a href="{{ path('character_list') }}">
-        <button>Retour</button>
-    </a>
+    {{ include('character/_form.html.twig', {'button_label': 'Valider'}) }}
 
     {{ include('character/_delete_form.html.twig') }}
+   
 {% endblock %}

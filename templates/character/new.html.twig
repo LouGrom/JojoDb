@@ -5,9 +5,8 @@
 {% block body %}
     <h1>Nouveau personnage</h1>
 
+     <a class="btn mb-4" href="{{ path('character_list') }}">Retour</a>
+
     {{ include('character/_form.html.twig') }}
 
-    <a href="{{ path('character_list') }}">
-        <button>Retour</button>
-    </a>
 {% endblock %}

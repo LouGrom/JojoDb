@@ -1,32 +1,23 @@
 /* HOME */
 body {
-    margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 h1 {
+    margin-top: 1em;
     text-align: center;
     font-family: 'Luckiest Guy', cursive;
     font-weight: normal;
 }
 
-button {
+.btn {
     background-color: rgb(159, 87, 177);
-    border-radius: 0.2em;
-    border: none;
-	display: inline-block;
-	font-size: 22px;
-	font-weight: bold;
-	padding: 16px 39px;
-    text-decoration: none;
-    transition: all 0.5s ease;
-    margin-bottom: 2em;
-    margin-left: 2em;
     color: coral;
 }
 
 
-button:hover{
+.btn:hover{
     transition: all 0.5s ease;
     background-color: rgba(159, 87, 177, 0.61);
     color: white;

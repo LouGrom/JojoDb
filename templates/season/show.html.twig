@@ -6,9 +6,7 @@
 
 <h1> {{ season.name }} </h1>
 
-<a href="{{ path('season_edit', {'id' : season.id}) }}">
-    <button>Modifier</button>
-</a>
+<a class="btn" href="{{ path('season_edit', {'id' : season.id}) }}">Modifier</a>
 
 <div class="season-container">
     <img src="{{ season.picture }}" alt="picture jojo season">

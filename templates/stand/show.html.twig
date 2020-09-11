@@ -4,14 +4,15 @@
 
 {% block body %}
 
-    <a href="{{ path('stand_edit', {'id' : stand.id})}}">
-        <button>Modifier</button>
-    </a>
-
     <h1>{{ stand.name }}</h1>
 
-    <img src="{{ stand.picture }}" alt="stand picture">
+    <a class="btn mb-4" href="{{ path('stand_edit', {'id' : stand.id})}}">Modifier</a>
+    <a class="btn mb-4" href="{{ path('stand_list')}}">Retour</a>
 
-    <p>{{ stand.description }}</p>
+    <div class="d-flex">
+        <img height="350" src="{{ stand.picture }}" alt="stand picture">
+
+        <p class="ml-4">{{ stand.description }}</p>
+    </div>
 
 {% endblock %}

@@ -4,30 +4,32 @@
 
 {% block body %}
 
-<a href="{{ path('character_edit', {'id' : character.id})}}">
-    <button>Modifier</button>
-</a>
-
 <h1> {{ character.name }} </h1>
-<img src="{{ character.picture }}" alt="character picture">
-<p>{{ character.description }} </p>
 
-<h2>Stand du personnage : </h2>
+<a class="btn mb-4" href="{{ path('character_edit', {'id' : character.id})}}">Modifier</a>
+<a class="btn mb-4" href="{{ path('character_list')}}">Retour</a>
+
+<div class="d-flex">
+    <img src="{{ character.picture }}" alt="character picture">
+    <p class="ml-4">{{ character.description }} </p>
+</div>
+
+<h2 class="mt-4">Stand du personnage : </h2>
 
 {% if character.standName is null %}
 
-<p>Ce personnage n'a pas de stand</p>
+<p class="mt-4">Ce personnage n'a pas de stand</p>
 
 {% else %}
 
-<div>
-    <p>{{ character.standName.name }}</p>
-    <img src="{{ character.standName.picture }}" alt="stand picture">
-    <p>{{ character.standName.description }}</p>
+
+<h1>{{ character.standName.name }}</h1>
+
+<div class="d-flex">
+    <img height="350" src="{{ character.standName.picture }}" alt="stand picture">
+    <p class="ml-4">{{ character.standName.description }}</p>
 </div>
 
 {% endif %}
-
-
 
 {% endblock %}

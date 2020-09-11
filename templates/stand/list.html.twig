@@ -4,17 +4,23 @@
 
 {% block body %}
 
-<a href="{{ path('character_new')}}">
-    <button>Ajouter</button>
-</a>
-
 <h1> Liste des stands : </h1>
-{% for stand in stands %}
 
-<a href="{{ path('stand_show', {'id' : stand.id})}}">{{ stand.name }}</a>
-<img src="{{ stand.picture }}" alt="character picture">
-<p>{{ stand.description }} </p>
+<a class="btn mb-4" href="{{ path('character_new')}}">Ajouter</a>
 
-{% endfor %}
+<div class="d-flex flex-wrap justify-content-around">
+    {% for stand in stands %}
+
+        <div class="card mb-5" style="width: 18rem;">
+            <img height="350" class="card-img-top" src="{{ stand.picture }}" alt="character picture">
+            <div class="card-body">
+                <h5 class="card-title">{{ stand.name }}</h5>
+                <p class="card-text">{{ stand.description[:150]~'...' }}</p>
+                <a href="{{ path('stand_show', {'id' : stand.id})}}" class="btn">Détail</a>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>
 
 {% endblock %}

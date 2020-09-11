@@ -5,11 +5,10 @@
 {% block body %}
     <h1>Modifier le Stand</h1>
 
+    <a class="btn mb-4" href="{{ path('stand_list') }}">Retour</a>
+
     {{ include('stand/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <a href="{{ path('stand_list') }}">
-        <button>Retour</button>
-    </a>
-
     {{ include('stand/_delete_form.html.twig') }}
+
 {% endblock %}

@@ -5,9 +5,8 @@
 {% block body %}
     <h1>Nouvelle saison</h1>
 
+     <a class="btn mb-4" href="{{ path('homepage') }}">Retour</a>
+
     {{ include('season/_form.html.twig') }}
 
-    <a href="{{ path('homepage') }}">
-        <button>Retour</button>
-    </a>
 {% endblock %}

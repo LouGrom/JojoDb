@@ -4,18 +4,22 @@
 
 {% block body %}
 
-<a href="{{ path('character_new')}}">
-    <button>Ajouter</button>
-</a>
-
 <h1> Liste des personnages : </h1>
 
-{% for character in characters %}
+<a class="btn mb-4" href="{{ path('character_new')}}">Ajouter</a>
 
-<a href="{{ path('character_show',{'id' : character.id})}}">{{ character.name }}</a>
-<img src="{{ character.picture }}" alt="character picture">
-<p>{{ character.description }} </p>
+<div class="d-flex flex-wrap justify-content-around">
+    {% for character in characters %}
 
-{% endfor %}
+        <div class="card mb-5" style="width: 18rem;"> 
+            <img class="card-img-top" src="{{ character.picture }}" alt="character picture">
+            <div class="card-body">
+                <h5 class="card-title">{{ character.name }}</h5>
+                <p class="card-text">{{ character.description[:150]~'...'}}</p>
+                <a href="{{ path('character_show',{'id' : character.id})}}" class="btn">Détail</a>
+            </div>
+        </div>
 
+    {% endfor %}
+</div>
 {% endblock %}

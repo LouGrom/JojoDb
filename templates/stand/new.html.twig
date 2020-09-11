@@ -5,9 +5,8 @@
 {% block body %}
     <h1>Nouveau Stand</h1>
 
+    <a class="btn" href="{{ path('stand_list') }}">Retour</a>
+
     {{ include('stand/_form.html.twig') }}
 
-    <a href="{{ path('stand_list') }}">
-        <button>Retour</button>
-    </a>
 {% endblock %}

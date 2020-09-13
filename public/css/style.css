@@ -96,11 +96,6 @@ nav a:hover {
 
 /* FORMS*/
 
-.form {
-    width: 60%;
-    margin: auto;
-}
-
 .form label {
     color: rgb(159, 87, 177);
     font-weight: bold;

@@ -6,15 +6,15 @@
 
 <h1> {{ character.name }} </h1>
 
-<a class="btn mb-4 ml-5" href="{{ path('character_edit', {'id' : character.id})}}">Modifier</a>
+<a class="btn mb-4" href="{{ path('character_edit', {'id' : character.id})}}">Modifier</a>
 <a class="btn mb-4" href="{{ path('character_list')}}">Retour</a>
 
 <div class="d-flex">
-    <img class="ml-5" src="{{ character.picture }}" alt="character picture">
+    <img src="{{ character.picture }}" alt="character picture">
     <p class="ml-4">{{ character.description }} </p>
 </div>
 
-<h2 class="mt-4 ml-5">Stand du personnage : </h2>
+<h2 class="mt-4">Stand du personnage : </h2>
 
 {% if character.standName is null %}
 
@@ -26,7 +26,7 @@
 <h1>{{ character.standName.name }}</h1>
 
 <div class="d-flex">
-    <img class="ml-5" height="350" src="{{ character.standName.picture }}" alt="stand picture">
+    <img height="350" src="{{ character.standName.picture }}" alt="stand picture">
     <p class="ml-4">{{ character.standName.description }}</p>
 </div>
 
